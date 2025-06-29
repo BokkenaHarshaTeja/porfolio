@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("IO81L-6W4J8iOUW_w"); 
+        })();
+    </script>
+</head>
+<body>
+    <div class="container">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="nav-links">
+            <a href="#home" class="nav">Home</a>
+            <a href="#about" class="nav">About</a>
+            <a href="#skills" class="nav">Skills</a>
+            <a href="#certificates" class="nav">Certifications</a>
+            <a href="#contact" class="nav">Contact</a>
+        </div>
+    </div>
+  
+
+    <div class="hero" id="home">      
+        <div class="hero-inner"></div>
+        <h1>
+            <div class="profile-photo">
+                <img src="./images/profile.jpg" alt="profile image" class="p">
+            </div>
+            Hello, I'm Harsha Teja
+        </h1>
+        <h4></h4>
+        <a href="Harshateja Resume.pdf" class="download-resume" download="Harshateja's Resume">Download Resume</a>
+    </div>
+
+    <!-- About-Me  -->
+    <div class="about-section">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content" id="about">
+            <p>I am a passionate developer with a strong interest in web development, Java, Python, and designing web pages. I specialize in building responsive and engaging websites, combining both technical and creative aspects of development.</p>
+            <p>I completed an internship at Intrainz, focusing on web development, where I gained practical experience in building web applications. I'm passionate about learning new technologies and applying them to real-world projects.</p>
+        </div>
+    </div> 
+    
+    <!-- Skills -->
+    <div class="skills-container" id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skills-item">
+                <h3>Programming Languages</h3>
+                <ul>    
+                    <li>Core Java</li>
+                    <li>Python</li>
+                    <li>C/C++</li>
+                </ul>
+            </div>
+            <div class="skills-item">
+                <h3>Web Development</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+        </div>
+    </div>  
+
+    <div class="certification-container" id="certificates">
+        <h2>Certificates</h2>
+        <div class="certification-grid">
+            <div>
+                <div class="certification-card">
+                    <img src="./images/wed-devops-certificate.jpg" alt="Web Development Certificate">
+                    <h3>Web Development</h3>
+                </div>
+                <div class="certification-card">
+                    <img src="./images/internship.jpg" alt="Intrainz">
+                    <h3>Intrainz Internship</h3>
+                </div>
+                <div class="certification-card">
+                    <img src="./images/cisco.jpg" alt="Cisco Python">
+                    <h3>Python Essentials</h3>
+                </div>
+                <div class="certification-card">
+                    <img src="./images/industrial certificate.jpg" alt="Industrial">
+                    <h3>Industrial Certificate</h3>
+                </div>
+                <div class="certification-card">
+                    <img src="./images/virtual intenship.jpg" alt="Virtual Internship">
+                    <h3>Virtual Internship</h3>
+                </div>
+                <div class="certification-card">
+                    <img src="./images/Workshop.jpg" alt="TSS Workshop">
+                    <h3>Generative AI workshop</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Modal Structure -->
+    <div id="certificateModal" class="modal" onclick="overlayClose(event)">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal(event)">&times;</span>
+            <div class="modal-body">
+            <img class="modal-img" id="modalImage" src="" alt="Certificate Image">
+            <div class="modal-description" id="modalDescription"></div>
+            </div>
+        </div>    
+    </div>
+
+    <!-- Project Container -->
+    <div class="project-container" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>A fully responsive and modern personal portfolio website built using HTML, CSS, and JavaScript. It showcases my skills, certifications, and projects with interactive animations.</p>
+                <a href="#" target="_blank" class="project-link">View Live</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Student Management System</h3>
+                <p>Developed using Java and MySQL, this system manages student records, attendance, and marks efficiently through a GUI-based application.</p>
+                <a href="#" target="_blank" class="project-link">GitHub Repo</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Weather App</h3>
+                <p>A simple and responsive weather application built with JavaScript that fetches real-time weather data from an API and displays it with a clean UI.</p>
+                <a href="#" target="_blank" class="project-link">Demo</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Modal for Contact Form -->
+    <div class="contact-container" id="contact">
+        <div class="contact-grid">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    
+    <button id="scrollToTop" class="scroll-to-top">↑</button>
+
+    <script type="text/javascript" src="./server.js"></script>
+</body>
+</html>
